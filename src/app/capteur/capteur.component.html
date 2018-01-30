@@ -1,0 +1,23 @@
+<table class="table" style="width: 100%;">
+  <thead class="thead-default">
+  <tr>
+    <th>nom</th>
+    <th>action</th>
+
+  </tr>
+  </thead>
+  <tr>  <td>  <input type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1" [(ngModel)]="nom">
+  </td>
+    <td><button type="button" class="btn btn-primary" (click)="addCapteur()">Ajouter</button></td>
+  </tr>
+  <tr *ngFor="let result of capteurs" >
+
+    <td>
+      <div class="left">{{result.capteurNom}}</div>
+    </td>
+    <td>
+      <button type="button" class="btn btn-danger" (click)="deleteCapteur(result.capteurId)">Effacer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
